@@ -12,7 +12,8 @@ namespace API_REST.Controllers
     public class UsuariosController: ControllerBase
     {
         //Cadena de conexion
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-LFTE4N6;Initial Catalog=ExamenNezter;Integrated Security=True;TrustServerCertificate=True");
+        
+        SqlConnection con = new SqlConnection("Data Source="+ Environment.GetEnvironmentVariable("Host")+";Initial Catalog=ExamenNezter;Integrated Security=True;TrustServerCertificate=True");
 
         //Obtener usuarios
         [HttpGet]
